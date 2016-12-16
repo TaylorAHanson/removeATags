@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"name": "Disable A Tags",
+	"description": "Allows the user to select text inside of a link by temporarily disabling anchor tags. Tap a three times to turn on, and three times to turn off",
+	"version": "1.0",
+
+	"browser_action": {
+		"default_icon": "icon.png"		
+	},
+	
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["removeATags.js"]
+		}
+	],
+	
+	"permissions": [
+		"activeTab"
+	]
+}
